@@ -1,3 +1,34 @@
+.messages {
+    display: grid;
+    grid-template-areas:'a n .' 'a n t';
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 70px 100px 20px;
+    background-color: aqua;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.conteinerAvatar {
+    grid-area: a;
+
+}
+
+.name {
+    grid-area: n;
+
+}
+
 .message {
 
+
+}
+
+.time {
+    grid-area: t;
+
+}
+
+.avatar {
+    width: 50px;
+    border-radius: 50%;
 }
