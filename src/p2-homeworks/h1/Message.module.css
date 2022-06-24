@@ -1,34 +1,64 @@
 .messages {
     display: grid;
-    grid-template-areas:'a n .' 'a n t';
+    grid-template-areas:'a m' 'a m';
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 70px 100px 20px;
+    grid-template-columns: 70px 100px;
     background-color: aqua;
-    width: 250px;
+    width: 270px;
+    height: 60px;
     border-radius: 10px;
 }
 
 .conteinerAvatar {
     grid-area: a;
+    margin: auto;
+
+
+}
+
+.conteinerMessage {
+
+    display: grid;
+    background-color: beige;
+    grid-area: m;
+    grid-template-areas:'name .' 'message time';
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 50px;
+    width: 170px;
+    margin-top: 5px;
+    margin-left: 0px;
+    border-radius: 5px;
+    padding-left: 15px;
 
 }
 
 .name {
-    grid-area: n;
-
+    grid-area: name;
+    width: 100px;
 }
 
 .message {
-
-
+    grid-area: message;
 }
 
 .time {
-    grid-area: t;
 
+    grid-area: time;
+    padding-left: 20px;
 }
 
 .avatar {
     width: 50px;
     border-radius: 50%;
+}
+
+.conteinerMessage:after {
+    content: '';
+    position: relative;
+    right: 183px;
+    top: 20px;
+    border: 15px solid transparent;
+    border-right: 10px solid beige;
+
 }
