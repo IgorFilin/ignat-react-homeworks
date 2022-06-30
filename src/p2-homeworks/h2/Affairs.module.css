@@ -1,7 +1,19 @@
-.someClass {
-
-}
-
 .affrairs {
     text-align: center;
+}
+
+.buttonsChange {
+    padding: 15px;
+}
+
+.buttonChange {
+    background-color: gold;
+    padding: 10px;
+    margin: 10px;
+}
+
+.buttonChange:hover {
+    transition: 0.5s;
+    border-radius: 4px;
+    background-color: coral;
 }

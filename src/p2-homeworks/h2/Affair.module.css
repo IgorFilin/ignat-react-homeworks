@@ -1,15 +1,31 @@
 .content {
+    background-color: aliceblue;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .affair {
-
+    padding-left: 150px;
+    font-size: 20px;
+    font-family: Algerian;
 }
 
 .priotiry {
+    font-size: 20px;
+    font-family: Algerian;
+    color: coral;
 }
 
 .button {
+
+    background-color: gold;
+    width: 50px;
+    margin-right: 150px;
+}
+
+.button:hover {
+    transition: 0.5s;
+    border-radius: 4px;
+    background-color: coral;
 
 }

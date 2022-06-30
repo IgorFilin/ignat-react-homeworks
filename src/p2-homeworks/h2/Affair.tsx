@@ -17,7 +17,7 @@ function Affair(props: AffairPropsType) {
     return (
         <div className={classes.content}>
             <div className={classes.affair}>{props.affair}</div>
-            <div className={classes.priotiry}>{props.priotiry}</div>
+            <div className={classes.priotiry}>{"[" + props.priotiry + "]"}</div>
             <div>
                 <button className={classes.button} onClick={() => deleteCallback(props.id)}>X</button>
             </div>
