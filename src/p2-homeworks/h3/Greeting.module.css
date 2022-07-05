@@ -1,7 +1,38 @@
 .someClass {
-
+    text-align: center;
 }
 
 .error {
     border: 1px solid red;
+    background-color: red;
+
+}
+
+.someClass button {
+    background-color: gold;
+
+
+}
+
+.someClass button:hover {
+    transition: 0.5s;
+    border-radius: 5px;
+    background-color: coral;
+}
+
+.noError {
+    background-color: cornsilk;
+}
+
+.someClass input:hover {
+    transition: 0.5s;
+    border-radius: 5px;
+    background-color: silver;
+}
+
+.users {
+    margin-left: 10px;
+    color: darkblue;
+    font-size: 20px;
+    font-family: Algerian;
 }
