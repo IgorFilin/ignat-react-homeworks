@@ -18,3 +18,12 @@
     border: solid 2px black;
     border-radius: 4px;
 }
+
+.sizeBtn {
+    width: 70px;
+    border-radius: 4px;
+}
+
+.sizeInput {
+
+}

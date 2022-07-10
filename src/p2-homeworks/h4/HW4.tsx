@@ -6,7 +6,7 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
 function HW4() {
     const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+    const error = text ? '' : 'Add title'
 
     const showAlert = () => {
         if (error) {
@@ -36,18 +36,19 @@ function HW4() {
                 />
 
                 <SuperInputText
+
                     className={s.black} // проверьте, работает ли смешивание классов
                 />
 
                 {/*----------------------------------------------------*/}
 
-                <SuperButton>
+                <SuperButton className={s.sizeBtn}>
                     default
                 </SuperButton>
-
                 <SuperButton
                     red // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
+
                 >
                     delete {/*// название кнопки попадёт в children*/}
                 </SuperButton>
