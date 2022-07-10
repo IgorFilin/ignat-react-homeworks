@@ -17,6 +17,7 @@ function HW4() {
     }
 
     const [checked, setChecked] = useState<boolean>(false)
+
     const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked)
 
     return (
@@ -30,11 +31,12 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                    spanClassName={s.testSpanError}
+                    className={s.superInput}
                 />
 
                 <SuperInputText
-                    className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={s.black} // проверьте, работает ли смешивание классов
                 />
 
                 {/*----------------------------------------------------*/}
@@ -60,7 +62,7 @@ function HW4() {
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    MyCheck {/*// этот текст попадёт в children*/}
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}

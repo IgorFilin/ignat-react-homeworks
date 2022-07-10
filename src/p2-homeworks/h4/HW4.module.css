@@ -10,4 +10,11 @@
 
 .testSpanError {
     color: blue;
+    font-family: "MS Reference Sans Serif";
+}
+
+.black {
+    background-color: dimgray;
+    border: solid 2px black;
+    border-radius: 4px;
 }

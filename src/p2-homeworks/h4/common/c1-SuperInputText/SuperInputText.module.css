@@ -1,11 +1,13 @@
 .superInput {
-
+    border: 2px solid wheat;
+    background-color: blue;
 }
 
 .errorInput {
     border: 3px solid lime;
     background: red;
 }
+
 
 .error {
     color: red;

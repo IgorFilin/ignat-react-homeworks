@@ -10,7 +10,7 @@ type AffairsPropsType = { // need to fix any
 }
 
 function Affairs(props: AffairsPropsType) {
-    debugger
+   
     const mappedAffairs = props.data.map((a: AffairType) => (
         <Affair
             key={a._id}
