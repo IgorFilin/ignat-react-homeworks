@@ -2,6 +2,7 @@ import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 import classes from './Affairs.module.css'
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type AffairsPropsType = { // need to fix any
     data: Array<AffairType>
@@ -10,7 +11,7 @@ type AffairsPropsType = { // need to fix any
 }
 
 function Affairs(props: AffairsPropsType) {
-   
+
     const mappedAffairs = props.data.map((a: AffairType) => (
         <Affair
             key={a._id}
@@ -39,10 +40,14 @@ function Affairs(props: AffairsPropsType) {
         <div className={classes.affrairs}>
             {mappedAffairs}
             <div className={classes.buttonsChange}>
-                <button className={classes.buttonChange} onClick={() => setAll('all')}>All</button>
-                <button className={classes.buttonChange} onClick={() => setHigh('high')}>High</button>
-                <button className={classes.buttonChange} onClick={() => setMiddle('middle')}>Middle</button>
-                <button className={classes.buttonChange} onClick={() => setLow('low')}>Low</button>
+                {/*<button className={classes.buttonChange} onClick={() => setAll('all')}>All</button>*/}
+                {/*<button className={classes.buttonChange} onClick={() => setHigh('high')}>High</button>*/}
+                {/*<button className={classes.buttonChange} onClick={() => setMiddle('middle')}>Middle</button>*/}
+                {/*<button className={classes.buttonChange} onClick={() => setLow('low')}>Low</button>*/}
+                <SuperButton className={classes.buttonChange} onClick={() => setMiddle('all')}>All</SuperButton>
+                <SuperButton className={classes.buttonChange} onClick={() => setMiddle('high')}>High</SuperButton>
+                <SuperButton className={classes.buttonChange} onClick={() => setMiddle('middle')}>Middle</SuperButton>
+                <SuperButton className={classes.buttonChange} onClick={() => setMiddle('low')}>Low</SuperButton>
             </div>
 
         </div>
