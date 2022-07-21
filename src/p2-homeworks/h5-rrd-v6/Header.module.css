@@ -1,0 +1,51 @@
+.navclass {
+    padding: 10px;
+    text-decoration: none;
+    font-family: Algerian;
+}
+
+.containerBlock {
+    display: flex;
+    transition-duration: 300ms;
+    transform: translateX(-299px);
+}
+
+.containerBlock:hover {
+    transition-duration: 0.8s;
+    transform: translateX(5px);
+}
+
+
+.navGroup {
+    background-color: aqua;
+    border: solid 2px black;
+    border-radius: 4px;
+
+}
+
+.active {
+    padding: 10px;
+    text-decoration: none;
+    color: coral;
+    font-family: Algerian;
+
+}
+
+.navclass:hover {
+    transition: 0.5s;
+    color: gold;
+}
+
+.active:hover {
+    transition: 0.5s;
+    color: gold;
+}
+
+.hoverMe {
+ border-radius: 8px;
+    border: gold solid 2px;
+    width: 100px;
+    color: black;
+    text-align: center;
+    font-family: Algerian;
+}

@@ -1,8 +1,62 @@
-.default {
-    background-color: whitesmoke;
-}
-
 .red {
     background: red;
 }
 
+.default {
+    text-decoration: none;
+    color: #6b5770;
+    background-image: linear-gradient(90deg, #fd7f34, #bd155b);
+    border: 1px solid;
+    position: relative;
+    z-index: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+}
+.default:before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(90deg, #fd7f34, #bd155b);
+    z-index: -2;
+    transition: .4s;
+    border-radius: 5px;
+}
+.default:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #fff, #fff);
+    z-index: -1;
+    transition: .4s;
+    border-radius: 4px;
+}
+.default:hover {
+    color: #fff;
+    transition: .3s;
+}
+.default:hover:after {
+    background: linear-gradient(90deg, #fd7f34, #bd155b);
+}
+.default:active:after {
+    background: linear-gradient(90deg, #d96d2d, #760f3a);
+}
+.default:focus-visible {
+    box-shadow: 0 0 0 3px #fd7f34;
+}
+.default:disabled {
+    pointer-events: none;
+}
+.default:disabled:before {
+    filter: grayscale(100%);
+}
