@@ -3,6 +3,7 @@
 }
 
 .default {
+    margin: 5px;
     text-decoration: none;
     color: #6b5770;
     background-image: linear-gradient(90deg, #fd7f34, #bd155b);
