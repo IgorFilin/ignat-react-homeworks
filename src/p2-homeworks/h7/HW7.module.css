@@ -1,0 +1,8 @@
+.selectGroup{
+    display: flex;
+    justify-content: center;
+}
+.radioGroup{
+    display: flex;
+    justify-content: center;
+}

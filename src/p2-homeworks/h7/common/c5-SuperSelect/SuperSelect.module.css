@@ -1,0 +1,10 @@
+.select {
+    font-size: 20px;
+    background-color: cornsilk;
+
+}
+.select:hover{
+   background-color: darkturquoise;
+    transition: 0.6s;
+    border-radius: 5px;
+}
