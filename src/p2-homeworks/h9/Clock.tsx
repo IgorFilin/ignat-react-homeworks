@@ -51,8 +51,8 @@ export const Clock = React.memo(() => {
         }
     }
 
-    const stringTime = hour+":"+ getZero(minutes)+':'+ getZero(seconds)
-    const stringDate = getZero(data)+'.'+ getZero(month) +'.'+ year  // fix with date
+    const stringTime = hour+":"+ getZero(minutes)+':'+ getZero(seconds) || <br/>
+    const stringDate = getZero(data)+'.'+ getZero(month) +'.'+ year || <br/>  // fix with date
     // const stringDate =  date.toLocaleDateString()
 
 
@@ -77,11 +77,11 @@ export const Clock = React.memo(() => {
                 {stringTime}
             </div>
 
-            {show && (
+            {show ? (
                 <div>
                     {stringDate}
                 </div>
-            )}
+            ):<br/>}
 
             <SuperButton  onClick={start}>start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>

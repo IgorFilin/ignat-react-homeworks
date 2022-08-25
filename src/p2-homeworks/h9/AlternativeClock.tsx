@@ -38,8 +38,8 @@ export const AlternativeClock = React.memo(() => {
     }
 
 
-    const stringTime = date.format('HH:mm:ss')
-    const stringDate = date.format('DD.MM.yyyy')
+    const stringTime = date.format('HH:mm:ss')|| <br/>
+    const stringDate = date.format('DD.MM.yyyy')|| <br/>
 
     let message = '';
     if (date.format('HH') <= 13) {
@@ -62,11 +62,11 @@ export const AlternativeClock = React.memo(() => {
                 {stringTime}
             </div>
 
-            {show && (
+            {show ? (
                 <div>
                     {stringDate}
                 </div>
-            )}
+            ):<br/>}
 
             <SuperButton  onClick={start}>start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>
