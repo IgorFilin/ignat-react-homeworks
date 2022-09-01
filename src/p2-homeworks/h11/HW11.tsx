@@ -6,25 +6,43 @@ function HW11() {
     const [value1, setValue1] = useState(0)
     const [value2, setValue2] = useState(100)
 
+    const onChange = (values: number[]) => {
+        setValue1(values[0])
+        setValue2(values[1])
+    }
+    const styles = {
+        span:{
+            fontSize:'25px',
+            fontFamily: 'Algerian'
+        }
+    }
+
+
     return (
-        <div>
+        <div style={{textAlign:'center'}}>
             <hr/>
             homeworks 11
-
             {/*should work (должно работать)*/}
             <div>
-                <span>{value1}</span>
+                <span style={styles.span}>{value1}</span>
                 <SuperRange
+                    value={value1}
+                    onChangeRange={setValue1}
+
                     // сделать так чтоб value1 изменялось
                 />
             </div>
 
-            <div>
-                <span>{value1}</span>
+            <div  style={{width: '150px', margin: 'auto'}}>
+                <span style={styles.span}>{value1}</span>
                 <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
+                    value={[value1,value2]}
+                    onChange={onChange}
+                    step={1}
+                    max={100}
+                    min={0}
                 />
-                <span>{value2}</span>
+                <span style={styles.span}>{value2}</span>
             </div>
 
             <hr/>
@@ -32,6 +50,8 @@ function HW11() {
             {/*<AlternativeSuperRange/>*/}
             {/*<AlternativeSuperDoubleRange/>*/}
             <hr/>
+            <br/>
+            <br/>
         </div>
     )
 }

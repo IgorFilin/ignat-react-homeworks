@@ -10,7 +10,7 @@ export type OneUserType = {
     age: number
 }
 
-const initialPeople = [
+export const initialPeople = [
     {_id: 0, name: 'Кот', age: 3},
     {_id: 1, name: 'Александр', age: 66},
     {_id: 2, name: 'Коля', age: 16},
@@ -42,7 +42,6 @@ function HW8() {
         <div className={s.content}>
             <hr/>
             homeworks 8
-
             {/*should work (должно работать)*/}
             <table rules={"all"} align={"center"} bgcolor={'ascending'} border={2} cellPadding={4}
                    width={250}>{finalPeople}</table>
