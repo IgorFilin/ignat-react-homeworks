@@ -19,11 +19,11 @@ function HW11() {
 
 
     return (
-        <div style={{textAlign:'center'}}>
+        <div >
             <hr/>
             homeworks 11
             {/*should work (должно работать)*/}
-            <div>
+            <div style={{textAlign:'center'}}>
                 <span style={styles.span}>{value1}</span>
                 <SuperRange
                     value={value1}

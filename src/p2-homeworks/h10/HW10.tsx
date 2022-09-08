@@ -7,7 +7,6 @@ import {initStateType, loadingAC} from "./bll/loadingReducer";
 function HW10() {
     // useSelector, useDispatch
     const isLoading = useSelector<AppStoreType, initStateType>(state => state.isLoading)
-    console.log(isLoading)
     const loading = isLoading.isLoading
     const dispatch = useDispatch()
 
@@ -23,12 +22,12 @@ function HW10() {
     };
 
     return (
-        <div style={{textAlign: 'center', fontSize: '20px'}}>
+        <div >
             <hr/>
             homeworks 10
             {/*should work (должно работать)*/}
-            {loading ? (<div><img style={{width:'80px',height:'50px'}} src="https://forumupload.ru/uploads/0019/3c/8c/2/282858.gif" alt="loading"/></div>) : (
-                <div>
+            {loading ? (<div style={{textAlign: 'center', fontSize: '20px'}}><img style={{width:'80px',height:'50px'}} src="https://forumupload.ru/uploads/0019/3c/8c/2/282858.gif" alt="loading"/></div>) : (
+                <div style={{textAlign: 'center', fontSize: '20px'}}>
                     <SuperButton onClick={setLoading}>set loading...</SuperButton>
                 </div>
 

@@ -21,3 +21,17 @@
 .some-text {
     color: darkslateblue;
 }
+.grey  {
+    background: rgba(20, 190, 147, 0.89);
+}
+
+.grey-text {
+    color: #2a0c4e;
+}
+.green {
+    background: rgba(182, 208, 16, 0.89);
+}
+
+.green-text {
+    color: #060101;
+}

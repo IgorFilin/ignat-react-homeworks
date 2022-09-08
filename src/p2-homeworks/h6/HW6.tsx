@@ -6,7 +6,6 @@ import {restoreState, saveState} from './localStorage/localStorage'
 
 function HW6() {
     const [value, setValue] = useState<string>('')
-    console.log(value)
 
     useEffect(()=> {restore()},[])
 
@@ -26,7 +25,6 @@ function HW6() {
         <div style={{textAlign:"center"}}>
             <hr/>
             homeworks 6
-
             {/*should work (должно работать)*/}
             <div>
                 <SuperEditableSpan

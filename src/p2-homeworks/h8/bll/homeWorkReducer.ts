@@ -1,11 +1,10 @@
-import {initialPeople, UsersType} from "../HW8";
+import {UsersType} from "../HW8";
 
 type ActionsType = sortUsersACType|checkAgeACType
 type sortUsersACType = ReturnType<typeof sortUsersAC>
 type checkAgeACType = ReturnType<typeof checkAgeAC>
 
-export const homeWorkReducer = (state: UsersType, action: ActionsType): UsersType => {
-    debugger// need to fix any
+export const homeWorkReducer = (state: UsersType, action: ActionsType): UsersType => {// need to fix any
     switch (action.type) {
         case 'sort': {
             if(action.payload === 'up'){
@@ -18,9 +17,12 @@ export const homeWorkReducer = (state: UsersType, action: ActionsType): UsersTyp
             // need to fix
             return state.filter(us => us.age > action.payload)
         }
-        default: return state
+        default: {
+            return state
+        }
+        }
     }
-}
+
 export const sortUsersAC = (valueSort:string) => {
     return {type: 'sort', payload: valueSort} as const
 }

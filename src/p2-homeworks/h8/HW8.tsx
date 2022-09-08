@@ -44,7 +44,7 @@ function HW8() {
             homeworks 8
             {/*should work (должно работать)*/}
             <table rules={"all"} align={"center"} bgcolor={'ascending'} border={2} cellPadding={4}
-                   width={250}>{finalPeople}</table>
+                   width={250}><tbody>{finalPeople}</tbody></table>
             <div className={s.buttonsGroup}>
                 <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
                 <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
