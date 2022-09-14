@@ -1,18 +1,22 @@
 import {loadingReducer} from './loadingReducer'
-import {combineReducers, legacy_createStore} from "redux";
+import {applyMiddleware, combineReducers, legacy_createStore, Dispatch, AnyAction} from "redux";
 import {themeReducer} from "../../h12/bll/themeReducer";
+import {RequestReducer} from "./RequestReducer";
+import MiddleWareThunk, {ThunkAction} from "redux-thunk";
+
 
 const rootReducer = combineReducers({
     isLoading: loadingReducer,
-    theme: themeReducer
-
+    theme: themeReducer,
+    Request:RequestReducer
 })
 
-const store = legacy_createStore(rootReducer)
+const store = legacy_createStore(rootReducer,applyMiddleware(MiddleWareThunk))
 
 export default store
 
 export type AppStoreType = ReturnType<typeof rootReducer>
+
 
 // @ts-ignore
 window.store = store // for dev
